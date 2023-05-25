@@ -65,6 +65,7 @@ input{
     height: 20%;
     outline: none;
     text-align: center;
+    text-transform: capitalize;
 }
 
 
@@ -80,4 +81,20 @@ button{
     height: 20%;
     font-family: 'Courier New', Courier, monospace;
     text-decoration: wavy;
+
+}
+
+
+
+.data{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    
+}
+
+
+.data>div{
+    background-color: aqua;
+    border: 3px solid black;
+    
 }

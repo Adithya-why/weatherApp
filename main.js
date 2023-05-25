@@ -39,19 +39,20 @@ const displayData = function(obj){
     
     
    let t = document.createElement('div');
-   t.innerHTML = obj.text;
+   t.innerHTML = "Weather : "+obj.text;
 
     let b = document.createElement('div');
-    b.innerHTML = obj.tempc;
+    b.innerHTML = "Temperature : " + obj.tempc + "°C";
 
     let c = document.createElement('div');
-    c.innerHTML = obj.ftempc;
+    c.innerHTML = "But feels like : "  + obj.ftempc + "°C";
 
     let d = document.createElement('div');
-    d.innerHTML = obj.humidity;
+    d.innerHTML = "Humidity: " + obj.humidity;
 
 
-    let div = document.querySelector('.data');
+    let mdiv = document.querySelector('.data');
+    let div = document.createElement('div');
     
     
     div.appendChild(t);
@@ -62,6 +63,8 @@ const displayData = function(obj){
 
     div.appendChild(d);
 
+
+    mdiv.appendChild(div);
    
 }
 
