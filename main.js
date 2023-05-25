@@ -65,6 +65,9 @@ const displayData = function(obj){
 
 
     mdiv.appendChild(div);
+
+
+    getPutGif(obj.text);
    
 }
 
@@ -78,6 +81,22 @@ const clr = function(){
 
 
 
+
+
+
+const getPutGif = async function(te){
+    let response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=R79jyx7Jq9jMJonmwqmV1u7xuA5D5HBB&s=${te}`,{mode:"cors"});
+    let rep2 = await response.json();
+    let src = rep2.data.images.original.url;
+    let x = document.querySelector('.data>div');
+    x.style.backgroundImage = `url('${src}')`;
+    x.style.backgroundRepeat = "no-repeat";
+    x.style.backgoundSize = "cover";
+    x.style.backgoundPosition = "center";
+    console.log(src);
+
+
+}
 
 async function start(){
 //let d = await getData("chennai");
